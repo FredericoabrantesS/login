@@ -97,15 +97,10 @@ npm run dev
 
 # 🌐 Deploy da Aplicação
 
-A aplicação foi publicada online utilizando:
-
-- Vercel / Netlify / GitHub Pages
+A aplicação foi publicada online utilizando Netlify 
 
 ## 🔗 Link da Aplicação
-
-```txt
-https://seu-site.vercel.app
-```
+https://agent-69ffeb8784a79ec7--creative-monstera-48755e.netlify.app
 
 ---
 
