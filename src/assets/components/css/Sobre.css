@@ -1,0 +1,102 @@
+
+/* FUNDO */
+.sobre-container {
+  min-height: 100vh;
+  background: #405888;
+
+  padding: 40px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* TÍTULO */
+.titulo {
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #ffffff;
+  animation: pulsarBrilho 1.5s infinite alternate;
+}
+@keyframes pulsarBrilho {
+    0% {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #0fa, 0 0 30px #0fa;
+    }
+    100% {
+      /* Aumenta o desfoque e a intensidade da sombra no final */
+      text-shadow: 0 0 10px #fff, 0 0 20px #0fa, 0 0 30px #0fa, 0 0 40px #0fa;
+    }
+  }
+
+/* GRID */
+.grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* CARD */
+.card {
+  background: white;
+  width: 300px;
+
+  padding: 25px;
+  border-radius: 16px;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+
+  text-align: center;
+
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* AVATAR */
+.avatar-circle {
+  width: 60px;
+  height: 60px;
+
+  border-radius: 50%;
+  background: #c73bf6;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+  font-weight: bold;
+
+  margin: 0 auto 10px;
+}
+
+/* TEXTO */
+.info {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* SKILLS */
+.skills {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #3b82f6;
+  font-weight: bold;
+  
+}
+
+#sobrebtn{
+    margin-top: 45px;
+    background-color: #3d5aed;
+    color: white;
+    border: none;
+    animation: pulsarBrilho 1.5s infinite alternate;
+}
+

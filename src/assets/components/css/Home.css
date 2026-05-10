@@ -1,0 +1,245 @@
+/* ─── Reset & Base ─── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:        #405888;
+  --surface:   #ffffff;
+  --border:    #e2e8f0;
+  --text:      #1e293b;
+  --muted:     #64748b;
+  --accent:    #6366f1;
+  --accent-dk: #4f46e5;
+  --success:   #22c55e;
+  --danger:    #ef4444;
+  --danger-dk: #dc2626;
+  --nav-bg:    #1e293b;
+  --radius:    14px;
+  --shadow:    0 4px 24px rgba(0, 0, 0, 0.08);
+  --font:      'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* ─── HEADER / NAV ─── */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  background: var(--nav-bg);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.06);
+
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 0 2rem;
+}
+
+.header-content {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.3px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav button {
+    margin-left: 250px;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.01rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #cbd5e1;
+  background: transparent;
+  transition: background 0.15s, color 0.15s;
+}
+
+.nav button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.nav .danger {
+  background: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+  margin-left: 6px;
+}
+
+.nav .danger:hover {
+  background: var(--danger);
+  color: #ffffff;
+}
+
+/* ─── CONTEÚDO PRINCIPAL ─── */
+.conteudo {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 96px 12.5rem 3rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* ─── SEÇÃO + CARD ─── */
+.section {
+  width: 100%;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.11);
+}
+
+.card h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.card h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+.card p {
+  font-size: 0.925rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.card p + p {
+  margin-top: 0.4rem;
+}
+
+/* ─── ÁREA DE LOGIN ─── */
+.login-area {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+/* ─── ÁREA DO USUÁRIO LOGADO ─── */
+.user-area {
+  margin-top: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.user-info h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.email {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+/* ─── BOTÕES GERAIS ─── */
+.buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 9px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s;
+}
+
+.btn:hover  { opacity: 0.88; }
+.btn:active { transform: scale(0.97); }
+
+.primary {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.primary:hover {
+  background: var(--accent-dk);
+  opacity: 1;
+}
+
+.success {
+  background: var(--success);
+  color: #ffffff;
+}
+
+.danger {
+  background: var(--danger);
+  color: #ffffff;
+}
+
+.danger:hover {
+  background: var(--danger-dk);
+  opacity: 1;
+}
+
+/* ─── RESPONSIVO ─── */
+@media (max-width: 600px) {
+  .header { padding: 0 1rem; }
+  .conteudo { padding-top: 80px; }
+  .card { padding: 1.5rem; }
+  .user-area { flex-direction: column; align-items: flex-start; }
+}

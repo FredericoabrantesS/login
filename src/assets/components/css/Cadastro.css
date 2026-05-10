@@ -1,0 +1,97 @@
+.cadastro-container {
+  min-height: 100vh;
+  background: #405888;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cadastro-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+
+  width: 100%;
+  max-width: 400px;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  text-align: center;
+}
+h1{
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+
+/* FORM */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* INPUT */
+.form input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* BOTÃO */
+.btn.primary {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn.primary:hover {
+  background: #2563eb;
+}
+
+/* JSON */
+.json {
+  margin-top: 15px;
+  background: #111;
+  color: #0f0;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 12px;
+}
+
+.btn.danger {
+  background: #ef4444;
+  color: white;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+   padding: 10px 16px; 
+  font-size: 14px;
+  border-radius: 8px;
+    border: none;
+    animation: pulsarBrilho 1.5s infinite alternate;
+}
+
+@keyframes pulsarBrilho {
+    0% {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px rgb(255, 255, 255), 0 0 30px rgb(255, 255, 255);
+    }
+    100% {
+      /* Aumenta o desfoque e a intensidade da sombra no final */
+      text-shadow: 0 0 10px #fff, 0 0 20px rgb(255, 255, 255), 0 0 30px rgb(255, 255, 255), 0 0 40px rgb(255, 255, 255);
+    }
+  }
+
+
+.btn.danger:hover {
+  background: #dc2626;
+}
+select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 100%;
+}
